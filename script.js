@@ -4,7 +4,7 @@ const taskInput = document.getElementById( 'taskInput');
 const taskList = document.getElementById( 'taskList');
 
 // função que cria um <li> com texto e botão "Remover"
-function createTaskItem(texto) {
+function createTaskItem(text) {
     const li = document.createElement('li');
     const span = document.createElement('span');
     span.textContent = text;

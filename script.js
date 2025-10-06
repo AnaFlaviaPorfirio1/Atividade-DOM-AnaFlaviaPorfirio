@@ -1,6 +1,6 @@
 // Seletores do DOM
 const taskForm = document.getElementById( 'taskForm' );
-const taskImput = document.getElementById( 'taskImput');
+const taskInput = document.getElementById( 'taskInput');
 const taskList = document.getElementById( 'taskList');
 
 // função que cria um <li> com texto e botão "Remover"
@@ -20,10 +20,10 @@ function createTaskItem(texto) {
 // Captura do submit
 taskForm.addEventListener('submit', function(e) {
     e.preventDefault();
-    const text = taskImput.value.trim();
+    const text = taskInput.value.trim();
     if (!text) return;
     const li = createTaskItem(text);
     taskList.appendChild(li);
-    taskImput.value = '';
-    taskImput.focus();
+    taskInput.value = '';
+    taskInput.focus();
 });
